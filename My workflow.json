@@ -1,0 +1,65 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 30
+            },
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -576,
+        -16
+      ],
+      "id": "5da93458-0950-45d2-be2e-14d16df733e8",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "                                                ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -336,
+        -16
+      ],
+      "id": "04903887-22b2-4db8-adeb-2a4f56997bd3",
+      "name": "HTTP Request"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "df36eae7-7f18-41aa-b8d7-7cbbf8608eac",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "016cf6a70aa3cf3e969003c35998542cbbfed09be8de1e3c5485feebe8a58633"
+  },
+  "id": "pRB0VmyyuJ3A2b1z",
+  "tags": []
+}
